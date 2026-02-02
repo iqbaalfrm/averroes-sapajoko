@@ -781,8 +781,12 @@ func (h *Handler) AdminDaftarBerita(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *Handler) AdminDaftarDiskusi(w http.ResponseWriter, r *http.Request) {
-\tdata, err := h.DiskusiUsecase.Daftar(r.Context())
-\tif err != nil {\n\t\tResponGagal(w, http.StatusInternalServerError, \"Gagal mengambil diskusi\", err.Error())\n\t\treturn\n\t}\n\tResponSukses(w, http.StatusOK, \"Daftar diskusi berhasil diambil\", data)
+	data, err := h.DiskusiUsecase.Daftar(r.Context())
+	if err != nil {
+		ResponGagal(w, http.StatusInternalServerError, "Gagal mengambil diskusi", err.Error())
+		return
+	}
+	ResponSukses(w, http.StatusOK, "Daftar diskusi berhasil diambil", data)
 }
 
 func (h *Handler) AdminDaftarScreener(w http.ResponseWriter, r *http.Request) {
