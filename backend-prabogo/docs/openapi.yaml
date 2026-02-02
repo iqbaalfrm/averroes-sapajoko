@@ -1,0 +1,119 @@
+openapi: 3.0.3
+info:
+  title: Averroes API
+  version: 1.0.0
+  description: API Averroes untuk platform crypto syariah dan muamalah digital.
+servers:
+  - url: http://localhost:8080/api/v1
+paths:
+  /status:
+    get:
+      summary: Status layanan
+      responses:
+        '200':
+          description: OK
+  /daftar:
+    post:
+      summary: Daftar pengguna
+  /verifikasi-otp:
+    post:
+      summary: Verifikasi OTP
+  /kirim-ulang-otp:
+    post:
+      summary: Kirim ulang OTP
+  /masuk:
+    post:
+      summary: Masuk
+  /keluar:
+    post:
+      summary: Keluar
+  /profil:
+    get:
+      summary: Ambil profil
+  /screener:
+    get:
+      summary: Daftar screener
+  /screener/{id}:
+    get:
+      summary: Detail screener
+  /screener/{id}/catatan:
+    get:
+      summary: Catatan screener
+  /pasar:
+    get:
+      summary: Daftar pasar
+  /kelas:
+    get:
+      summary: Daftar kelas
+  /kelas/{id}:
+    get:
+      summary: Detail kelas
+  /kelas/{id}/modul:
+    get:
+      summary: Daftar modul
+  /modul/{id}/materi:
+    get:
+      summary: Daftar materi
+  /kelas/{id}/ujian:
+    get:
+      summary: Daftar ujian
+  /kelas/{id}/mulai:
+    post:
+      summary: Mulai kelas
+  /progress:
+    get:
+      summary: Progress kelas
+  /pustaka:
+    get:
+      summary: Daftar pustaka
+  /pustaka/{id}:
+    get:
+      summary: Detail pustaka
+  /berita:
+    get:
+      summary: Berita
+  /berita/terbaru:
+    get:
+      summary: Berita terbaru
+  /diskusi:
+    get:
+      summary: Daftar diskusi
+    post:
+      summary: Buat diskusi
+  /diskusi/{id}:
+    get:
+      summary: Detail diskusi
+  /diskusi/{id}/balas:
+    post:
+      summary: Balas diskusi
+  /diskusi/{id}/lapor:
+    post:
+      summary: Lapor diskusi
+  /portofolio:
+    get:
+      summary: Daftar portofolio
+    post:
+      summary: Tambah portofolio
+  /portofolio/{id}:
+    put:
+      summary: Perbarui portofolio
+    delete:
+      summary: Hapus portofolio
+  /zakat/ringkasan:
+    get:
+      summary: Ringkasan zakat
+  /zakat/riwayat:
+    get:
+      summary: Riwayat zakat
+  /harga-emas:
+    get:
+      summary: Harga emas
+  /reels:
+    get:
+      summary: Daftar reels
+  /reels/{id}:
+    get:
+      summary: Detail reels
+  /tadabbur:
+    get:
+      summary: Daftar tadabbur
